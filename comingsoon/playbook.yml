@@ -1,4 +1,4 @@
- name: "Build Image and run container with ansible playbook"
+- name: "Build Image and run container with ansible playbook"
   hosts: localhost
   tasks:
   - name: stop running container
