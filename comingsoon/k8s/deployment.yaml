@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comingsoon-page-img-deployment
+  namespace: jenkins
+spec:
+  selector:
+    matchLabels:
+      app: comingsoon-page
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: comingsoon-page
+    spec:
+      containers:
+      - name: comingsoon-page
+        image: comingsoon-pages
+        ports:
+        - containerPort: 80
