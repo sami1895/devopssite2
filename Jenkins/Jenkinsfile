@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {
                     def remote = [
-                        name: "k8smaster",
+                        name: "minikube",
                         host: env.REMOTE_HOST,
                         user: env.REMOTE_USER,
                         password: env.REMOTE_PASSWORD,
