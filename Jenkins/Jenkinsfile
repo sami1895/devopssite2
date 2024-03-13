@@ -46,7 +46,7 @@ pipeline {
                   sshPut remote: remote, from: 'comingsoon/k8s/deployment.yaml', into: '.'    
                 }
              stage('Deploy devopssite2') {
-                  sshCommand remote: remote, command: "kubectl apply -f deployment.yaml"
+                  sshCommand remote: remote, command: "kubectl apply -f comingsoon/k8s/deployment.yaml"
         }       
             }
         }
