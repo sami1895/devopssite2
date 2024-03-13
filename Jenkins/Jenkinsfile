@@ -43,7 +43,7 @@ pipeline {
                         allowAnyHosts: true
                     ]
              stage('Put-deployment.yml onto k8smaster') {
-                  sshPut remote: remote, from: 'comingsoon/k8s/deployment.yaml', into: '.'    
+                  sshPut remote: remote, from: 'deployment.yaml', into: '.'    
                 }
              stage('Deploy devopssite2') {
                   sshCommand remote: remote, command: "kubectl apply -f deployment.yaml"
